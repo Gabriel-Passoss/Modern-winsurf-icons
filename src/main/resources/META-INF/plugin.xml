@@ -1,0 +1,58 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.modernicons.icon-theme</id>
+    <name>Modern Icon Theme</name>
+    <vendor email="support@modernicons.com" url="https://github.com/modernicons">Modern Icons</vendor>
+
+    <description><![CDATA[
+    <h2>Modern Icon Theme - Beautiful Icons for JetBrains IDEs</h2>
+    <p>A beautiful modern icon theme for JetBrains IDEs with 346 carefully designed icons.</p>
+    <p>为JetBrains IDE打造的精美现代化图标主题，包含346个精心设计的图标。</p>
+    
+    <br/>
+    <h3>✨ 功能特性 | Features</h3>
+    <ul>
+        <li>🎯 <b>346个精美图标</b> - 覆盖所有常见文件类型和文件夹</li>
+        <li>📁 <b>智能文件夹识别</b> - 234种文件夹自动匹配独特图标</li>
+        <li>📄 <b>广泛文件支持</b> - 支持207种文件扩展名</li>
+        <li>🎨 <b>现代设计风格</b> - 色彩丰富，视觉清晰</li>
+        <li>⚡ <b>高性能</b> - 图标缓存优化，不影响IDE性能</li>
+        <li>🔧 <b>即装即用</b> - 安装即生效，无需配置</li>
+    </ul>
+    
+    <br/>
+    <h3>📚 支持的文件类型 | Supported File Types</h3>
+    <ul>
+        <li><b>编程语言：</b>Java, Kotlin, Python, JavaScript, TypeScript, Go, Rust, C/C++, C#, Ruby, PHP, Swift等40+种语言</li>
+        <li><b>Web技术：</b>HTML, CSS, SCSS, Vue, React, Angular, Svelte, Astro等</li>
+        <li><b>配置文件：</b>JSON, XML, YAML, TOML, INI, ENV等</li>
+        <li><b>构建工具：</b>Gradle, Maven, Docker, Webpack, Vite, Rollup等</li>
+        <li><b>数据库：</b>SQL, MongoDB, Prisma, Drizzle等</li>
+        <li><b>云服务：</b>Firebase, Supabase, Vercel, Netlify等</li>
+    </ul>
+    
+    <br/>
+    <h3>🚀 快速开始 | Quick Start</h3>
+    <p>安装后重启IDE即可享受全新的图标体验！</p>
+    <p>安装后重启IDE，禁用或卸载插件即可恢复默认图标。</p>
+    
+    <br/>
+    <p>Made with ❤️ for developers | 为开发者用心打造</p>
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- File Icon Provider -->
+        <iconProvider implementation="com.modernicons.icontheme.ModernIconProvider" order="first"/>
+        
+        <!-- Application Service for Icon Management -->
+        <applicationService 
+                serviceImplementation="com.modernicons.icontheme.service.IconMappingService"/>
+    </extensions>
+
+    <actions>
+        <!-- Optional: Add actions if needed -->
+    </actions>
+</idea-plugin>
