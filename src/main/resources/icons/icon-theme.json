@@ -1,4 +1,14 @@
 {
+    "fileSuffixes": {
+                      "service.ts": "angular-service",
+                      "component.ts": "angular-component",
+                      "directive.ts": "angular-directive",
+                      "guard.ts": "angular-guard",
+                      "module.ts": "angular-module",
+                      "pipe.ts": "angular-pipe",
+                      "spec.ts": "ts-test",
+                      "spec.js": "js-test"
+                  },
     "fileExtensions":  {
                            "proto":  "proto",
                            "hs":  "haskell",
@@ -86,7 +96,7 @@
                            "tar":  "code",
                            "changelog":  "markdown",
                            "deb":  "code",
-                           "html":  "code",
+                           "html":  "code-orange",
                            "fs":  "fsharp",
                            "d.ts":  "ts-types",
                            "ps1":  "code-purple",
@@ -154,7 +164,7 @@
                            "lhs":  "haskell",
                            "maven":  "xml",
                            "jenkinsfile":  "jenkins",
-                           "xhtml":  "code",
+                           "xhtml":  "code-orange",
                            "mjs":  "js",
                            "bmp":  "image",
                            "tsv":  "csv",

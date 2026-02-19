@@ -12,6 +12,9 @@ data class IconTheme(
     @SerializedName("folder")
     val defaultFolderIcon: String? = null,
     
+    @SerializedName("fileSuffixes")
+    val fileSuffixes: Map<String, String>? = null,
+
     @SerializedName("fileExtensions")
     val fileExtensions: Map<String, String>? = null,
     

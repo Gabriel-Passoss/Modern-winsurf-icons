@@ -56,6 +56,18 @@ class IconMappingService {
             return icon
         }
         
+        // Try to find icon by compound suffix (e.g. "service.ts", "component.ts")
+        theme.fileSuffixes?.let { suffixes ->
+            val lowerFileName = fileName.lowercase()
+            for ((suffix, iconId) in suffixes) {
+                if (lowerFileName.endsWith(".$suffix") || lowerFileName == suffix) {
+                    val icon = loadIcon(iconId)
+                    iconCache[cacheKey] = icon
+                    return icon
+                }
+            }
+        }
+
         // Try to find icon by extension
         if (extension != null) {
             theme.fileExtensions?.get(extension.lowercase())?.let { iconId ->
